@@ -42,7 +42,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-zd-uC7">
                                         <rect key="frame" x="130" y="24" width="114" height="42"/>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
-                                        <color key="textColor" red="0.0071624154764863956" green="0.34893641665297798" blue="0.6986218403658101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.7654630829015544" green="0.11466805444835873" blue="0.0076798674760119503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause-button" translatesAutoresizingMaskIntoConstraints="NO" id="3qi-13-yOH">
@@ -81,6 +81,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-iP-K48">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="85"/>
+                                                    <color key="backgroundColor" red="0.99736720320000005" green="0.80147677660000005" blue="0.0" alpha="0.333984375" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htq-rA-hhK">
                                                     <rect key="frame" x="0.0" y="85" width="105" height="20"/>
@@ -89,7 +90,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="EvI-Cf-6mJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="12"/>
-                                                    <color key="textColor" red="0.0071624154759999999" green="0.34893641669999997" blue="0.69862184039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.76546308289999998" green="0.1146680544" blue="0.0076798674759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -139,6 +140,10 @@
                             <constraint firstItem="W0O-R0-8jn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xiV-g1-4wh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="lNe-gd-rXH" id="5oV-6p-7HY"/>
+                        <outlet property="searchBar" destination="W0O-R0-8jn" id="VWe-63-dcm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
