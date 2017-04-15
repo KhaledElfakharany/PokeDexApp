@@ -19,6 +19,7 @@
 		95C6F5381EA24155008BA1C7 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F5371EA24155008BA1C7 /* csv.swift */; };
 		95C6F53D1EA244F0008BA1C7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F53C1EA244F0008BA1C7 /* Pokemon.swift */; };
 		95C6F5411EA246D6008BA1C7 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F5401EA246D6008BA1C7 /* PokeCell.swift */; };
+		95C6F5431EA256F7008BA1C7 /* Song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5421EA256F7008BA1C7 /* Song.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		95C6F5371EA24155008BA1C7 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		95C6F53C1EA244F0008BA1C7 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		95C6F5401EA246D6008BA1C7 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		95C6F5421EA256F7008BA1C7 /* Song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Song.mp3; sourceTree = "<group>"; };
 		C425AF6A7AF83FC1FCC40C5C /* Pods-PokeDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeDex/Pods-PokeDex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				95C6F5301EA23A2C008BA1C7 /* Pokemon Solid.ttf */,
 				95C6F5321EA23A35008BA1C7 /* Pokemon Hollow.ttf */,
 				95C6F5341EA24139008BA1C7 /* pokemon.csv */,
+				95C6F5421EA256F7008BA1C7 /* Song.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C6F5431EA256F7008BA1C7 /* Song.mp3 in Resources */,
 				95C6F5281EA0102F008BA1C7 /* LaunchScreen.storyboard in Resources */,
 				95C6F5311EA23A2C008BA1C7 /* Pokemon Solid.ttf in Resources */,
 				95C6F5331EA23A35008BA1C7 /* Pokemon Hollow.ttf in Resources */,
