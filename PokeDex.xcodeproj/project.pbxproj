@@ -12,6 +12,10 @@
 		95C6F5231EA0102F008BA1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5211EA0102F008BA1C7 /* Main.storyboard */; };
 		95C6F5251EA0102F008BA1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5241EA0102F008BA1C7 /* Assets.xcassets */; };
 		95C6F5281EA0102F008BA1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5261EA0102F008BA1C7 /* LaunchScreen.storyboard */; };
+		95C6F5311EA23A2C008BA1C7 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5301EA23A2C008BA1C7 /* Pokemon Solid.ttf */; };
+		95C6F5331EA23A35008BA1C7 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5321EA23A35008BA1C7 /* Pokemon Hollow.ttf */; };
+		95C6F5351EA24139008BA1C7 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5341EA24139008BA1C7 /* pokemon.csv */; };
+		95C6F5381EA24155008BA1C7 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6F5371EA24155008BA1C7 /* csv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		95C6F5241EA0102F008BA1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95C6F5271EA0102F008BA1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95C6F5291EA0102F008BA1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C6F5301EA23A2C008BA1C7 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		95C6F5321EA23A35008BA1C7 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		95C6F5341EA24139008BA1C7 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		95C6F5371EA24155008BA1C7 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		95C6F51C1EA0102F008BA1C7 /* PokeDex */ = {
 			isa = PBXGroup;
 			children = (
+				95C6F5361EA24144008BA1C7 /* Utilities */,
+				95C6F52F1EA23A1F008BA1C7 /* Resources */,
 				95C6F51D1EA0102F008BA1C7 /* AppDelegate.swift */,
 				95C6F51F1EA0102F008BA1C7 /* ViewController.swift */,
 				95C6F5211EA0102F008BA1C7 /* Main.storyboard */,
@@ -62,6 +72,24 @@
 				95C6F5291EA0102F008BA1C7 /* Info.plist */,
 			);
 			path = PokeDex;
+			sourceTree = "<group>";
+		};
+		95C6F52F1EA23A1F008BA1C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95C6F5301EA23A2C008BA1C7 /* Pokemon Solid.ttf */,
+				95C6F5321EA23A35008BA1C7 /* Pokemon Hollow.ttf */,
+				95C6F5341EA24139008BA1C7 /* pokemon.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		95C6F5361EA24144008BA1C7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				95C6F5371EA24155008BA1C7 /* csv.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C6F5281EA0102F008BA1C7 /* LaunchScreen.storyboard in Resources */,
+				95C6F5311EA23A2C008BA1C7 /* Pokemon Solid.ttf in Resources */,
+				95C6F5331EA23A35008BA1C7 /* Pokemon Hollow.ttf in Resources */,
 				95C6F5251EA0102F008BA1C7 /* Assets.xcassets in Resources */,
+				95C6F5351EA24139008BA1C7 /* pokemon.csv in Resources */,
 				95C6F5231EA0102F008BA1C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C6F5381EA24155008BA1C7 /* csv.swift in Sources */,
 				95C6F5201EA0102F008BA1C7 /* ViewController.swift in Sources */,
 				95C6F51E1EA0102F008BA1C7 /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +333,7 @@
 				95C6F52E1EA0102F008BA1C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
