@@ -98,7 +98,8 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: 105, height: 105)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let poke = pokemonsToShow[indexPath.row]
+        performSegue(withIdentifier: "PokeDetails", sender: poke)
     }
 
     @IBAction func musicbtnPressed(_ sender: Any) {
@@ -110,6 +111,15 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             audio.play()
             let image = UIImage(named: "pause-button")
             playingBtn.setImage(image, for: .normal)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokeDetails" {
+            if let destination = segue.destination as? PokemonDetailsVC {
+                if let poke = sender as? Pokemon {
+                    destination.sentPokemon = poke
+                }
+            }
         }
     }
 }
