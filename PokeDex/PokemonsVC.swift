@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 
-class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
     var pokemon : Pokemon!
     var pokemons = [Pokemon]()
+    var filterdPokemons = [Pokemon]()
+    var pokemonsToShow = [Pokemon]()
     var audio : AVAudioPlayer!
 
     @IBOutlet weak var playingBtn: UIButton!
@@ -23,8 +25,24 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        searchBar.delegate = self
         parseCSV()
         initAudio()
+        pokemonsToShow = pokemons
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            pokemonsToShow = pokemons
+            collectionView.reloadData()
+        } else {
+            let name = searchBar.text?.lowercased()
+            filterdPokemons = pokemons.filter({$0.name.range(of: name!) != nil })
+            pokemonsToShow = filterdPokemons
+            collectionView.reloadData()
+        }
+        
+        
     }
     
     func initAudio() {
@@ -38,7 +56,7 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             print(error.debugDescription)
         }
     }
-    
+
     func parseCSV(){
         let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")
         do {
@@ -62,7 +80,7 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
-            let poke = pokemons[indexPath.row]
+            let poke = pokemonsToShow[indexPath.row]
             cell.configureCell(pokemon: poke)
             return cell
         }
@@ -72,7 +90,7 @@ class PokemonsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pokemons.count
+        return pokemonsToShow.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
