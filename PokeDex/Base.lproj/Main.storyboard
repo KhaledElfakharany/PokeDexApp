@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--PokemonsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PokemonsVC" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,7 +72,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xZ4-G6-nnf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="xZ4-G6-nnf" customClass="PokeCell" customModule="PokeDex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -103,6 +103,10 @@
                                             <constraint firstItem="Htq-rA-hhK" firstAttribute="top" secondItem="VJC-iP-K48" secondAttribute="bottom" id="eMr-Sc-MLH"/>
                                             <constraint firstAttribute="trailing" secondItem="Htq-rA-hhK" secondAttribute="trailing" id="pRa-UP-RIP"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokemonImage" destination="VJC-iP-K48" id="wak-2n-Tda"/>
+                                            <outlet property="pokemonName" destination="Htq-rA-hhK" id="V7B-od-YmR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

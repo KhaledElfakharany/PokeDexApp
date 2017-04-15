@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PokemonsVC.swift
 //  PokeDex
 //
 //  Created by Khaled Elfakharany on 4/13/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PokemonsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
